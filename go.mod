@@ -86,6 +86,7 @@ require (
 	github.com/zeebo/xxh3 v1.0.2
 	go.etcd.io/bbolt v1.4.3
 	goftp.io/server/v2 v2.0.2
+	open-sdk-go v0.0.0
 	golang.org/x/crypto v0.42.0
 	golang.org/x/net v0.44.0
 	golang.org/x/oauth2 v0.31.0
@@ -100,12 +101,15 @@ require (
 	storj.io/uplink v1.13.1
 )
 
+replace open-sdk-go => ./open-sdk-go-220616
+
 require (
 	cloud.google.com/go/auth v0.16.5 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.8 // indirect
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/internal v1.11.2 // indirect
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.5.0 // indirect
+	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/ProtonMail/bcrypt v0.0.0-20211005172633-e235017c1baf // indirect
 	github.com/ProtonMail/gluon v0.17.1-0.20230724134000-308be39be96e // indirect
 	github.com/ProtonMail/go-mime v0.0.0-20230322103455-7d82a3887f2f // indirect
@@ -179,7 +183,7 @@ require (
 	github.com/googleapis/enterprise-certificate-proxy v0.3.6 // indirect
 	github.com/googleapis/gax-go/v2 v2.15.0 // indirect
 	github.com/gorilla/schema v1.4.1 // indirect
-	github.com/hashicorp/errwrap v1.1.0 // indirect
+	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.8 // indirect
@@ -267,7 +271,6 @@ require (
 
 require (
 	github.com/IBM/go-sdk-core/v5 v5.21.0
-	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/ProtonMail/go-crypto v1.3.0
 	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/pkg/xattr v0.4.12
