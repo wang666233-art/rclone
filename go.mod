@@ -89,20 +89,7 @@ require (
 	github.com/zeebo/xxh3 v1.0.2
 	go.etcd.io/bbolt v1.4.3
 	goftp.io/server/v2 v2.0.2
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 924501008797cef4628c9b23822429374e50c84d
 	open-sdk-go v0.0.0
-	golang.org/x/crypto v0.42.0
-	golang.org/x/net v0.44.0
-	golang.org/x/oauth2 v0.31.0
-	golang.org/x/sync v0.17.0
-	golang.org/x/sys v0.36.0
-	golang.org/x/text v0.29.0
-	golang.org/x/time v0.13.0
-	google.golang.org/api v0.250.0
-=======
 	golang.org/x/crypto v0.45.0
 	golang.org/x/net v0.47.0
 	golang.org/x/oauth2 v0.33.0
@@ -111,7 +98,6 @@ require (
 	golang.org/x/text v0.31.0
 	golang.org/x/time v0.14.0
 	google.golang.org/api v0.255.0
->>>>>>> 847734d421d219f1b12b144fcb0d08a6556e1485
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/validator.v2 v2.0.1
 	gopkg.in/yaml.v3 v3.0.1
@@ -125,15 +111,7 @@ require (
 	cloud.google.com/go/auth/oauth2adapt v0.2.8 // indirect
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/internal v1.11.2 // indirect
-<<<<<<< HEAD
-	github.com/AzureAD/microsoft-authentication-library-for-go v1.5.0 // indirect
-	github.com/Microsoft/go-winio v0.5.2 // indirect
-<<<<<<< HEAD
-=======
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.6.0 // indirect
->>>>>>> 847734d421d219f1b12b144fcb0d08a6556e1485
-=======
->>>>>>> 924501008797cef4628c9b23822429374e50c84d
 	github.com/ProtonMail/bcrypt v0.0.0-20211005172633-e235017c1baf // indirect
 	github.com/ProtonMail/gluon v0.17.1-0.20230724134000-308be39be96e // indirect
 	github.com/ProtonMail/go-mime v0.0.0-20230322103455-7d82a3887f2f // indirect
