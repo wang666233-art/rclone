@@ -90,6 +90,9 @@ require (
 	go.etcd.io/bbolt v1.4.3
 	goftp.io/server/v2 v2.0.2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 924501008797cef4628c9b23822429374e50c84d
 	open-sdk-go v0.0.0
 	golang.org/x/crypto v0.42.0
 	golang.org/x/net v0.44.0
@@ -125,9 +128,12 @@ require (
 <<<<<<< HEAD
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.5.0 // indirect
 	github.com/Microsoft/go-winio v0.5.2 // indirect
+<<<<<<< HEAD
 =======
 	github.com/AzureAD/microsoft-authentication-library-for-go v1.6.0 // indirect
 >>>>>>> 847734d421d219f1b12b144fcb0d08a6556e1485
+=======
+>>>>>>> 924501008797cef4628c9b23822429374e50c84d
 	github.com/ProtonMail/bcrypt v0.0.0-20211005172633-e235017c1baf // indirect
 	github.com/ProtonMail/gluon v0.17.1-0.20230724134000-308be39be96e // indirect
 	github.com/ProtonMail/go-mime v0.0.0-20230322103455-7d82a3887f2f // indirect
