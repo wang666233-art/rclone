@@ -1,0 +1,13 @@
+github.com/rclone/rclone/backend/baidupan
+# github.com/rclone/rclone/backend/baidupan
+backend/baidupan/baidupan.go:142:17: cannot use oauth2.Config{…} (value of struct type oauth2.Config) as *oauthutil.Config value in struct literal
+backend/baidupan/baidupan.go:220:59: cannot use &oauthutil.Options{…} (value of type *oauthutil.Options) as *oauthutil.Config value in argument to oauthutil.NewClient
+backend/baidupan/baidupan.go:221:17: cannot use oauth2.Config{…} (value of struct type oauth2.Config) as *oauthutil.Config value in struct literal
+backend/baidupan/baidupan.go:311:9: undefined: err
+backend/baidupan/baidupan.go:312:35: undefined: err
+backend/baidupan/baidupan.go:335:9: undefined: err
+backend/baidupan/baidupan.go:336:35: undefined: err
+backend/baidupan/baidupan.go:545:9: undefined: err
+backend/baidupan/baidupan.go:546:35: undefined: err
+backend/baidupan/baidupan.go:701:9: undefined: err
+backend/baidupan/baidupan.go:701:9: too many errors
