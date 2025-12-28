@@ -1,0 +1,48 @@
+name: simple-build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Build rclone
+        run: make
+
+      - name: Copy compiled binary to project root
+        run: |
+          BIN_NAME="rclone$(go env GOEXE)"
+          DEST_NAME="rclone-ci-ubuntu$(go env GOEXE)"
+          if [[ ! -f "${BIN_NAME}" ]]; then
+            echo "Expected ${BIN_NAME} after build but it was not found" >&2
+            exit 1
+          fi
+          cp -v "${BIN_NAME}" "${DEST_NAME}"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rclone-linux-ci
+          path: |
+            rclone$(go env GOEXE)
+            rclone-ci-ubuntu$(go env GOEXE)
