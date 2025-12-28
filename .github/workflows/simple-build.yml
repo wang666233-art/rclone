@@ -38,11 +38,13 @@ jobs:
             exit 1
           fi
           cp -v "${BIN_NAME}" "${DEST_NAME}"
+          echo "BIN_NAME=${BIN_NAME}" >> $GITHUB_ENV
+          echo "DEST_NAME=${DEST_NAME}" >> $GITHUB_ENV
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: rclone-linux-ci
           path: |
-            rclone$(go env GOEXE)
-            rclone-ci-ubuntu$(go env GOEXE)
+            ${{ env.BIN_NAME }}
+            ${{ env.DEST_NAME }}
