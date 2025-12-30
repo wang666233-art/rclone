@@ -1,0 +1,53 @@
+name: build-linux-arm64
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-linux-arm64:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    env:
+      GOOS: linux
+      GOARCH: arm64
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Build rclone
+        run: make
+
+      - name: Copy compiled binary to project root
+        run: |
+          BIN_NAME="rclone$(go env GOEXE)"
+          DEST_NAME="rclone-ci-ubuntu-${GOARCH}$(go env GOEXE)"
+          if [[ ! -f "${BIN_NAME}" ]]; then
+            echo "Expected ${BIN_NAME} after build but it was not found" >&2
+            exit 1
+          fi
+          cp -v "${BIN_NAME}" "${DEST_NAME}"
+          echo "BIN_NAME=${BIN_NAME}" >> $GITHUB_ENV
+          echo "DEST_NAME=${DEST_NAME}" >> $GITHUB_ENV
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rclone-linux-ci-${{ env.GOARCH }}
+          path: |
+            ${{ env.BIN_NAME }}
+            ${{ env.DEST_NAME }}
